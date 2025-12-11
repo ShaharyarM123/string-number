@@ -271,3 +271,118 @@ function palWords(s){
     return s.split(" ").filter(w=>isPalindrome(w));
 }
 console.log(40, palWords("madam is at civic center"));
+
+
+// number problems
+
+// 1
+document.querySelector('#q1').onclick = function() {
+    document.querySelector('#out1').textContent = Math.round(4.7);
+}
+
+// 2
+document.querySelector('#q2').onclick = function() {
+    document.querySelector('#out2').textContent = Math.ceil(5.3);
+}
+
+// 3
+document.querySelector('#q3').onclick = function() {
+    document.querySelector('#out3').textContent = Math.floor(8.9);
+}
+
+// 4
+document.querySelector('#q4').onclick = function() {
+    document.querySelector('#out4').textContent = Math.random();
+}
+
+// 5
+document.querySelector('#q5').onclick = function() {
+    document.querySelector('#out5').textContent = Math.floor(Math.random() * 10);
+}
+
+// 6
+document.querySelector('#q6').onclick = function() {
+    document.querySelector('#out6').textContent = Math.floor(Math.random() * 100) + 1;
+}
+
+// 7
+document.querySelector('#q7').onclick = function() {
+    document.querySelector('#out7').textContent = parseInt("42");
+}
+
+// 8
+document.querySelector('#q8').onclick = function() {
+    document.querySelector('#out8').textContent = parseFloat("3.14159");
+}
+
+// 9
+document.querySelector('#q9').onclick = () => {
+    let num = document.querySelector('#input9').value;
+    document.querySelector('#out9').textContent = Math.round(Number(num));
+};
+
+// 10
+document.querySelector('#q10').onclick = () => document.querySelector('#out10').textContent = Math.floor(Math.random() * 6) + 1;
+
+// 11
+document.querySelector('#q11').onclick = () => document.querySelector('#out11').textContent = Math.round(36.6);
+
+// 12
+document.querySelector('#q12').onclick = () => document.querySelector('#out12').textContent = Math.ceil(9.25);
+
+// 13
+document.querySelector('#q13').onclick = () => {
+    let sum = parseInt("10") + parseFloat("5.5");
+    document.querySelector('#out13').textContent = sum;
+};
+
+// 14
+document.querySelector('#q14').onclick = () => {
+    let n = Math.floor(Math.random() * 10) + 1;
+    document.querySelector('#out14').textContent = n * 2;
+};
+
+// 15
+document.querySelector('#q15').onclick = () => {
+    let val = document.querySelector('#input15').value;
+    document.querySelector('#out15').textContent = isNaN(parseInt(val)) ? "Not a number" : "Valid number";
+};
+
+// 16
+document.querySelector('#q16').onclick = () => {
+    let arr = [1.2, 2.5, 3.7];
+    let rounded = arr.map(x => Math.round(x));
+    document.querySelector('#out16').textContent = rounded.join(", ");
+};
+
+// 17
+document.querySelector('#q17').onclick = () => {
+    let result = Math.random() < 0.5 ? "Heads" : "Tails";
+    document.querySelector('#out17').textContent = result;
+};
+
+// 18
+document.querySelector('#q18').onclick = () => {
+    let min = Number(document.querySelector('#min18').value);
+    let max = Number(document.querySelector('#max18').value);
+    let num = Math.floor(Math.random() * (max - min + 1)) + min;
+    document.querySelector('#out18').textContent = num;
+};
+
+// 19
+document.querySelector('#q19').onclick = () => {
+    let str = "Total: 45.90 USD";
+    let num = parseFloat(str.match(/[\d.]+/)[0]);
+    document.querySelector('#out19').textContent = num;
+};
+
+// 20
+document.querySelector('#q20').onclick = () => {
+    let n = 4.3;
+    let rounded = Math.round(n * 2) / 2;
+    document.querySelector('#out20').textContent = rounded;
+};
+
+
+
+
